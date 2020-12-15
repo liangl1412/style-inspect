@@ -1,0 +1,17 @@
+{
+    "name": "Style inspect",
+    "version": "1.0",
+    "author": "Yi Zhou",
+    "description": "Check all unique style been used in this page",
+    "browser_action": {
+        "default_icon": "images/off.png"
+    },
+    "background": {
+        "scripts": ["./background.js"]
+    },
+    "permissions": [
+        "tabs",
+        "*://*/*"
+    ],
+    "manifest_version": 2
+  }
