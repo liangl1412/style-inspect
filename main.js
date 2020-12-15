@@ -1,4 +1,4 @@
-function bfs(tree, parentStyle, prop, result) {
+function dfs(tree, parentStyle, prop, result) {
     if (!tree) return;
     const curStyle = getComputedStyle(tree)[prop] || parentStyle;
     if (curStyle && curStyle !== parentStyle) {
@@ -11,7 +11,7 @@ function bfs(tree, parentStyle, prop, result) {
     if(tree.childElementCount) {
         const children = tree.children;
         for(let i=0; i< children.length; i++ ) {
-            bfs(children[i], curStyle, prop, result)
+            dfs(children[i], curStyle, prop, result)
         }
     }
     
@@ -24,7 +24,7 @@ function run () {
     console.log('unique style being used in this page');
     styleProps.forEach((prop) => {
         const result = {}
-        bfs(startNode, '', prop, result)
+        dfs(startNode, '', prop, result)
         console.log(prop, result)
     })
 }
