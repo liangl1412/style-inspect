@@ -1,6 +1,6 @@
 {
     "name": "Style inspect",
-    "version": "1.0",
+    "version": "1.1",
     "author": "Yi Zhou",
     "description": "Check all unique style been used in this page",
     "browser_action": {

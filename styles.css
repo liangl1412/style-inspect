@@ -1,0 +1,103 @@
+#style-inspect {
+    position: fixed;
+    width: 360px;
+    bottom: 20px;
+    max-height: 800px;
+    top: 20px;
+    right: 20px;
+    z-index: 99999;
+    background: rgb(221, 221, 221);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    font-size: 14px;
+    line-height: 2;
+    overflow: auto;
+    cursor: move;
+}
+
+.si-section {
+    margin-bottom: 20px;
+}
+
+.si-element {
+    cursor: pointer;
+}
+
+.si-element:hover {
+    background: #ccc;
+}
+
+.si-element svg {
+    width: 20px;
+    fill: green;
+    display: none;
+}
+
+.si-font-box {
+    display: flex;
+    align-items: center;
+}
+
+.si-font-box svg {
+    margin-left: auto;
+}
+
+.si-section-title {
+    font-size: 20px;
+    color: rgb(86,86,86);
+    text-transform: uppercase;
+    line-height: 40px;
+    border-bottom: 2px solid rgb(86,86,86);
+}
+
+.si-selected svg {
+    display: block;
+}
+
+
+.si-section-colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.si-color {
+    margin: 10px 0;
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.si-color-input {
+    border-radius: 5px;
+    height: 50px;
+    border: 1px solid black !important;
+    width: 100%;
+    overflow: hidden;
+}
+
+.si-color-label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+.si-border-active {
+    border: 2px dashed red !important
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
