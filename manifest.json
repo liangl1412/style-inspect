@@ -13,5 +13,9 @@
         "tabs",
         "*://*/*"
     ],
+    "icons": { 
+        "16": "icon16.png",
+        "48": "icon48.png"
+    },
     "manifest_version": 2
   }
