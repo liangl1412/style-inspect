@@ -1,5 +1,5 @@
 (function () {
-	const styleProps = ['color', 'fontSize', 'fontFamily', 'backgroundColor']
+	const styleProps = ['color', 'fontSize', 'fontFamily', 'backgroundColor', 'lineHeight', 'letterSpacing', 'fontWeight']
 	const startNode = window.document.body;
 	const data = {};
 	const checkSvg = `
@@ -87,8 +87,8 @@
 	for (let i = 0; i < toggleNodes.length; i++) {
 		const currentNode = toggleNodes[i];
 		currentNode.addEventListener('click', (e) => {
-			// skip on input color 
-			if (e.target.className.includes('si-color-input')) return;
+			// skip on input color
+			if (e.target.tagName !== 'svg' && e.target.className.includes('si-color-input')) return;
 			const key = currentNode.dataset.key;
 			const type = currentNode.dataset.type;
 			if (currentNode.className.includes('si-selected')) {
@@ -114,13 +114,25 @@
 			const color = currentNode.value;
 			currentNode.nextElementSibling.textContent = color;
 			data[type][key].forEach((node) => {
-				node.style[type] = color;
+				if (type === 'color') {
+					node.style.cssText += ` color: ${color} !important;`
+				} else {
+					node.style.cssText += ` background-color: ${color} !important;`
+				}
+				
 			})
 		})
 	}
 
 	// from https://www.w3schools.com/howto/howto_js_draggable.asp
-	dragElement(document.getElementById("style-inspect"));
+	const siNode = document.getElementById("style-inspect");
+	// reset 
+	window.addEventListener("resize", () => {
+		siNode.style.left = '';
+		siNode.style.right = '20px';
+	});
+
+	dragElement(siNode);
 	function dragElement(elmnt) {
 		var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 		elmnt.onmousedown = dragMouseDown;
