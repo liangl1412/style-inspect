@@ -1,5 +1,6 @@
 # style-inspect
 
+Link to store: https://chrome.google.com/webstore/detail/style-inspect/glkjdigblpcpjidkmadoeceklgmlalpb
 An open source chrome extension developer tool
 
 Check all unique style been used in this page
