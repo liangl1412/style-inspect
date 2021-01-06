@@ -1,7 +1,7 @@
 # style-inspect
 
-Link to store: https://chrome.google.com/webstore/detail/style-inspect/glkjdigblpcpjidkmadoeceklgmlalpb
 An open source chrome extension developer tool
+Link to store: https://chrome.google.com/webstore/detail/style-inspect/glkjdigblpcpjidkmadoeceklgmlalpb
 
 Check all unique style been used in this page
 Extract all unique style like font size, font color and background color that generate into a viewable style guide for user with just one click
